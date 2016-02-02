@@ -1,0 +1,35 @@
+<template name="machinesItem">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-cog"></i> {{name}}
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col col-xs-12">
+          {{> machineGraph machineId=_id}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-xs-4">
+          <div class="row">
+
+            <div class="col col-xs-12">{{> newState machineId=_id}} </div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12">{{> statesList machineId=_id onClick=onStateClick}}</div>
+          </div>
+        </div>
+        {{#with selectedState}}
+          <div class="col col-xs-4">
+            
+            {{> actionsList stateId=_id}}
+          </div>
+          <div class="col col-xs-4">
+            
+            {{> newAction stateId=_id machineId=../_id}}
+          </div>
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</template>

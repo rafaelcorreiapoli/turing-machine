@@ -1,0 +1,12 @@
+<template name="newState">
+  {{#autoForm collection="States" id="insertStatesForm" type="insert" machineId=machineId}}
+    <div class="row">
+      <div class="col col-xs-6">
+        {{> afFieldInput name="name"}}
+      </div>
+      <div class="col col-xs-6">
+        <button type="submit" class="btn btn-primary btn-block">Add State</button>
+      </div>
+    </div>
+  {{/autoForm}}
+</template>

@@ -1,0 +1,7 @@
+<template name="statesList">
+  <ul class="list-group">
+  {{#each states}} 
+    <li class='list-group-item select-state {{#if selected}}active{{/if}}'>{{name}}</li>
+  {{/each}}
+  </ul>
+</template>

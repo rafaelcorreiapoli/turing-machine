@@ -1,0 +1,13 @@
+<template name="newAction">
+  {{#autoForm collection="Actions" id="insertActionsForm" type="insert" machineId=machineId stateId=stateId}}
+    {{> afQuickField name="input" options=alphabet}}
+    {{> afQuickField name="output" options=alphabet}} 
+    {{> afQuickField name="direction"}} 
+    {{> afQuickField name="nextStateId" options=nextStates}}
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary btn-block">Add Action</button>
+      </div>
+    </div>
+  {{/autoForm}}
+</template>

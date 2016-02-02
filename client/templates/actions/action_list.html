@@ -1,0 +1,12 @@
+<template name="actionsList">
+  <ul class="list-group">
+    {{#each actions}}
+      <li class='list-group-item select-action {{#if selected}}active{{/if}}'>
+        {{input}} > {{output}},
+        {{#with nextState}}
+          {{name}}
+        {{/with}}
+      </li>
+    {{/each}}
+  </ul>
+</template>

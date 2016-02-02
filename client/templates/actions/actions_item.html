@@ -1,0 +1,26 @@
+<template name="actionItem">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>state</td>
+        <td>{{state.name}}</td>
+      </tr>
+      <tr>
+        <td>next state</td>
+        <td>{{nextState.name}}</td>
+      </tr>      
+      <tr>
+        <td>input</td>
+        <td>{{input}}</td>
+      </tr>
+      <tr>
+        <td>output</td>
+        <td>{{output}}</td>
+      </tr>
+      <tr>
+        <td>move to</td>
+        <td>{{moveToIcon direction}}</td>
+      </tr>
+    </tbody>
+  </table> 
+</template>

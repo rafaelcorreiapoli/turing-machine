@@ -1,0 +1,17 @@
+<template name="newMachine">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-plus"></i> New Machine
+    </div>
+    <div class="panel-body">
+      {{#autoForm collection="Machines" id="insertMachinesForm" type="insert"}}
+        {{> afQuickField name="name"}} 
+        {{> afQuickField name="inputAlphabet"}} 
+        {{> afQuickField name="tapeAlphabet"}} 
+        {{> afQuickField name="infiniteLeft"}}
+        {{> afQuickField name="infiniteRight"}} 
+        <button type="submit" class="btn btn-primary">New</button>
+      {{/autoForm}}
+    </div>
+  </div>
+</template>
